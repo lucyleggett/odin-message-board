@@ -6,11 +6,13 @@ const messages = [
   {
     text: "hey, who's up?",
     user: "Tony",
+    color: "#b66ab8",
     added: new Date(),
   },
   {
     text: "Yo, you still online?",
     user: "Tia",
+    color: "#027860",
     added: new Date(),
   },
 ];
@@ -20,8 +22,15 @@ indexRouter.get("/", (req, res) =>
 );
 
 indexRouter.post("/new", (req, res) => {
-  const { messageInput, nameInput } = req.body;
-  messages.push({ text: messageInput, user: nameInput, added: new Date() });
+  const { messageInput, nameInput, themeColor } = req.body;
+  const color = /^#[0-9a-f]{6}$/i.test(themeColor) ? themeColor : "#ffffff";
+
+  messages.push({
+    text: messageInput,
+    user: nameInput,
+    color,
+    added: new Date(),
+  });
   res.redirect("/");
 });
 

@@ -1,6 +1,11 @@
-<div class="message">
-  <h3 class="user"><%= message.user %></h3>
-  <p class="date-time"><%= formatDate(message.added) %> at <%= formatTime(message.added) %></p>
+<div class="message bebas-neue">
+  <div class="message-info">
+    <h3 class="user" style="--user-clr: <%= message.color %>">
+      <%= message.user %>
+    </h3>
+    <p class="date-time">
+      <%= formatDate(message.added) %> at <%= formatTime(message.added) %>
+    </p>
   </div>
-  <p class="message"><%= message.text %></p>
+  <p class="message-text"><%= message.text %></p>
 </div>

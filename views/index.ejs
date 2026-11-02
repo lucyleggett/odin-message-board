@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Message board</title>
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   </head>
   <body>
     <a href="/new" class="button">Post a message</a>
@@ -13,5 +16,6 @@
             <%- include('message', { message: message }); %>
         <% }); %>
     </div>
+    <script src="/script.js"></script>
   </body>
 </html>
