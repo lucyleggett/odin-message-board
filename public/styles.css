@@ -209,6 +209,7 @@ form button {
   height: 55.75px;
   width: 100px;
   align-self: center;
+  color: black;
   background-color: transparent;
   background-image: url(./images/paper-plane.png);
   background-repeat: none;
