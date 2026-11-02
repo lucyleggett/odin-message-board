@@ -7,6 +7,11 @@ const { indexRouter } = require("./routes/indexRouter");
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 
+const { formatDate, formatTime } = require("./helpers.js");
+
+app.locals.formatDate = formatDate;
+app.locals.formatTime = formatTime;
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
