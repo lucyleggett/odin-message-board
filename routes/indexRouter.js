@@ -4,13 +4,13 @@ const indexRouter = Router();
 
 const messages = [
   {
-    text: "hey, who's up?",
+    text: "hello from colorado!",
     user: "Tony",
     color: "#b66ab8",
     added: new Date(),
   },
   {
-    text: "Yo, you still online?",
+    text: "nice to meet you man!",
     user: "Tia",
     color: "#027860",
     added: new Date(),

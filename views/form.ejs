@@ -1,6 +1,12 @@
-<form method="POST" action="/new">
+<form method="POST" action="/new" class="gaegu-regular">
   <label for="name-input" class="sr-only">Your name</label>
-  <input name="nameInput" type="text" id="name-input" placeholder="Your name" required="true" />
+  <input
+    name="nameInput"
+    type="text"
+    id="name-input"
+    placeholder="Your name"
+    required="true"
+  />
 
   <label for="message-input" class="sr-only">Your message</label>
   <textarea
@@ -11,8 +17,10 @@
     required="true"
   ></textarea>
 
-  <label for="theme-color">Choose a color:</label>
-  <input name="themeColor" type="color" id="theme-color" value="#ff0000" />
+  <div class="color-picker">
+    <label for="theme-color">Choose a color:</label>
+    <input name="themeColor" type="color" id="theme-color" value="#ff0000" />
+  </div>
 
   <button type="submit">Submit</button>
 </form>
