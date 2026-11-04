@@ -1,3 +1,5 @@
+<% const v = locals.values || {}; %>
+
 <form method="POST" action="/new" class="gaegu-regular">
   <label for="name-input" class="sr-only">Your name</label>
   <input
@@ -5,6 +7,7 @@
     type="text"
     id="name-input"
     placeholder="Your name"
+    value="<%= v.nameInput || '' %>"
     required="true"
   />
 
@@ -14,12 +17,12 @@
     id="message-input"
     rows="4"
     placeholder="Your message"
-    required="true"
-  ></textarea>
+    required
+  ><%= v.messageInput || '' %></textarea>
 
   <div class="color-picker">
     <label for="theme-color">Choose a color:</label>
-    <input name="themeColor" type="color" id="theme-color" value="#ff0000" />
+    <input name="themeColor" type="color" id="theme-color" value="<%= v.themeColor || '#ff0000' %>" />
   </div>
 
   <button type="submit">Submit</button>

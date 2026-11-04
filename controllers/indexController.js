@@ -30,6 +30,7 @@ exports.msgCreate = [
     if (!errors.isEmpty()) {
       return res.status(400).render("newMsg", {
         errors: errors.array(),
+        values: req.body,
       });
     }
     const { messageInput, nameInput, themeColor } = matchedData(req);
