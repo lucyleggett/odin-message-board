@@ -1,3 +1,17 @@
+require("dotenv").config();
+
+const http = require("http");
+const { neon } = require("@neondatabase/serverless");
+
+const sql = neon(process.env.DATABASE_URL);
+
+const requestHandler = async (req, res) => {
+  const result = await sql`SELECT version()`;
+  const { version } = result[0];
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end(version);
+};
+
 const express = require("express");
 const path = require("node:path");
 
@@ -26,10 +40,7 @@ app.use((err, req, res, next) => {
   res.status(err.statusCode || 500).send(err.message);
 });
 
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, (error) => {
-  if (error) {
-    throw error;
-  }
-  console.log(`Listening on port ${PORT}!`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
 });
