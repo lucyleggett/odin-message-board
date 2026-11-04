@@ -96,6 +96,13 @@ body {
   line-height: 1em;
 }
 
+.gaegu-bold {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1em;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -174,6 +181,10 @@ body {
   transition: transform 0.2s ease-in-out;
 }
 
+.return {
+  margin-bottom: 1em;
+}
+
 .button:hover {
   transform: rotate(-5deg);
   transform-origin: top center;
@@ -185,8 +196,19 @@ form {
   align-items: center;
   gap: 0.5em;
   width: 100%;
-  margin-top: 1em;
   font-size: 20px;
+}
+
+ul {
+  list-style-position: outside;
+  padding-left: 20px;
+  margin-left: 0;
+}
+
+li {
+  font-size: 20px;
+  color: rgb(177, 9, 9);
+  font-weight: 700;
 }
 
 #name-input,

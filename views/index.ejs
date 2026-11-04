@@ -13,7 +13,7 @@
     <a href="/new" class="button gaegu-regular">Post a message</a>
     <div class="message-board">
         <% messages.forEach((message) => { %>
-            <%- include('message', { message: message }); %>
+            <%- include('partials/message', { message: message }); %>
         <% }); %>
     </div>
     <script src="/script.js"></script>

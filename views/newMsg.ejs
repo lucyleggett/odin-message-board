@@ -7,14 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
-    <a href="/" class="button gaegu-regular">Return to message board</a>
-    <%- include('form') %>
+    <a href="/" class="return button gaegu-regular">Return to message board</a>
+    <%- include("partials/errors.ejs") %> <%- include('form') %>
     <script src="/script.js"></script>
   </body>
 </html>
